@@ -1,0 +1,40 @@
+.BottomControlWrapper{
+    /*margin-top: 50px;*/
+    width: 100%;
+
+    /*position: absolute;*/
+    left: 0;
+    bottom: 0;
+    height: 7rem
+}
+
+.BottomControlWrapper .SecondRow,
+.BottomControlWrapper .FirstRow{
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    display: flex;
+    justify-content: space-evenly;
+}
+.BottomControlWrapper .FirstRow {
+    padding: 0 10px;
+    float: right;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.BottomControlWrapper .FirstRow .CustomDisabled{
+    border: 1px dotted #fff;
+    margin-left: 5px ;
+}
+.BottomControlWrapper .FirstRow .CustomDisabled Input{
+    color: #fff !important;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.BottomControlWrapper .SecondRow{
+    clear: both;
+    width: 100%;
+}

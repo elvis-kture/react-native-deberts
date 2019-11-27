@@ -1,0 +1,14 @@
+.Right,
+.Left {
+    width: 50%;
+    color: #fff;
+    padding: 5px 0;
+    float: left;
+}
+
+.BorderBottom{
+    border-bottom: 1px solid rgba(81, 81, 81, 1);
+}
+tr:nth-child(even) .BorderBottom{
+    background: #4c4d4e;
+}

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "exmulti",
-    "slug": "exmulti",
+    "name": "deberts",
+    "slug": "deberts",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "platforms": [
@@ -24,7 +24,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-4065129637072044~3085545727"
+      }
+    },
+    "android": {
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-4065129637072044~3085545727"
+      }
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "css"]
+    },
+    "iosStatusBar": {
+      "backgroundColor": "#C2185B"
     }
   }
 }
