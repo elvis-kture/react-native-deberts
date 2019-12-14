@@ -156,7 +156,6 @@ class Game extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.dashboard.initial, '---')
     return {
         total: state.dashboard.total,
         initial: state.dashboard.initial,
@@ -182,5 +181,3 @@ const mapDispatchToProps = (dispatch, props) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Game);
-
-// export default Game;

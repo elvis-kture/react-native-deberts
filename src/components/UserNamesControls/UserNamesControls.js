@@ -19,7 +19,8 @@ const UserNamesControls = ( props ) => {
                 />
                 <View style={styles.button}>
                     <Button text={props.leftName}
-                            primary={props.side === consts.LEFT}
+                             secondary
+                            accent={props.side === consts.LEFT}
                             raised
                             onPress={() => props.nameClicked(consts.LEFT)}
                             onLongPress={() => props.handleButtonPress(consts.LEFT)}
@@ -28,7 +29,8 @@ const UserNamesControls = ( props ) => {
                 <View style={styles.button}>
                     <Button  text={props.rightName}
                              raised
-                             primary={props.side === consts.RIGHT}
+                             secondary
+                             accent={props.side === consts.RIGHT}
                              onPress={() => props.nameClicked(consts.RIGHT)}
                              onLongPress={() => props.handleButtonPress(consts.RIGHT)}
                     />
@@ -46,6 +48,8 @@ const styles = StyleSheet.create({
         marginBottom: 5
     },
     button: {
+        borderWidth: 2,
+        borderColor: '#fff',
         flex: 2,
     },
 });

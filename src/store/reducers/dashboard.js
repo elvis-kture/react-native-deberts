@@ -31,7 +31,6 @@ AsyncStorage.getItem('last_game', (err, result) => {
 // const initialState = JSON.parse(AsyncStorage.getItem('last_game')) || initState;
 
 const addRow = ( state, action ) => {
-    console.log('reducer:addRow')
 
     const newPoints = [...state.points]
     const newRow = {...action.row}
@@ -125,13 +124,11 @@ const removeRow = (state, action) => {
 };
 
 const setRows = (state, action) => {
-    console.log('reducer:setRows')
     return updateObject( state, action.newState );
 };
 
 const updateInitial = (state, action) => {
 
-    console.log('reducer:updateInitial')
     return updateObject( state, {
         initial: +action.value
     } );
@@ -140,14 +137,10 @@ const updateInitial = (state, action) => {
 
 const calculateRound = (state, action) => {
 
-    console.log('reducer:calculateRound')
-
     return state;
 };
 
 const changeSide = (state, action) => {
-
-    console.log('reducer:changeSide')
 
     return updateObject( state, {
         side: action.side
@@ -155,8 +148,6 @@ const changeSide = (state, action) => {
 };
 
 const changeName = (state, action) => {
-
-    console.log('reducer:changeSide')
 
     let newSideNames = {...state.sideNames}
     newSideNames[action.side] = action.name
@@ -167,7 +158,6 @@ const changeName = (state, action) => {
 };
 
 const clearRows = (state, action) => {
-    console.log('reducer:clearRows')
 
     const lastGame = updateObject( initState, {
         sideNames: {

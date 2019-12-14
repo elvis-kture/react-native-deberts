@@ -20,17 +20,9 @@ export const initHistoryRows = () => {
 
     return dispatch => {
         AsyncStorage.getItem('history', (err, result) => {
-            console.log()
             const history = JSON.parse(result) || [];
-            console.log(err, result, 'console.log')
             dispatch(initHistoryRowsSuccess(history));
         });
     };
 
 };
-
-// export const initRows = ( rows ) => {
-//     return dispatch => {
-//         dispatch(setIngredients(rows));
-//     };
-// };

@@ -1,6 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
 import {AsyncStorage} from 'react-native';
-import {updateObject} from "../utility";
 
 let initialState = []
 AsyncStorage.getItem('history', (err, result) => {
@@ -8,16 +7,13 @@ AsyncStorage.getItem('history', (err, result) => {
 });
 
 const removeHistoryRow = (state, action) => {
-
     const newHistoryPoints = state.filter((point, index) => index !== action.index)
-
     AsyncStorage.setItem('history', JSON.stringify(newHistoryPoints))
 
     return newHistoryPoints;
 };
 
 const initHistoryRows = (state, action) => {
-    console.log('initHistoryRows', action.history)
     return action.history;
 };
 

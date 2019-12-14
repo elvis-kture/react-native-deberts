@@ -41,9 +41,13 @@ class AdditioanlControls extends Component {
 
         return (
             <View style={styles.view}>
-                    <View style={styles.buttons}>
-                        <Button raised style={styles.button} text={''+this.props.total[consts.LEFT]}  />
-                        <Button raised style={styles.button} text={''+this.props.total[consts.RIGHT]}  />
+                    <View style={styles.buttonsText}>
+                        <View style={{flex:2, borderWidth: 1, borderColor: 'red'}}>
+                            <Text style={styles.buttonText}>{this.props.total[consts.LEFT]} </Text>
+                        </View>
+                        <View  style={{flex:2, borderWidth: 1, borderColor: 'red'}}>
+                            <Text style={styles.buttonText}>{this.props.total[consts.RIGHT]} </Text>
+                        </View>
                     </View>
 
                     <View style={styles.buttons}>
@@ -61,6 +65,7 @@ class AdditioanlControls extends Component {
 
 const styles = StyleSheet.create({
     buttons: {
+        // height: 50,
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -68,8 +73,25 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         position: 'relative'
     },
+    buttonsText: {
+        // height: 50,
+        flex: 1,
+        flexDirection: 'row',
+        // justifyContent: 'space-around',
+        alignItems: 'stretch',
+        marginBottom: 20
+    },
     button: {
         color: '#fff'
+    },
+    buttonText: {
+        padding: 10,
+        color: '#fff',
+        borderColor: '#fff',
+        borderWidth: 1,
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 'bold',
     },
     view: {
         position: 'absolute',

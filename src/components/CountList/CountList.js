@@ -32,7 +32,6 @@ const CounterList = ( props ) => {
             pairs_table.push({
                     html:
                         <Cell
-                            index={key}
                             key={consts.WINNER}
                             pair_obj={{[consts.LEFT]: consts.WINNER, [consts.RIGHT]: '...'}}
                             deleted={() => props.rowDeleted(consts.WINNER)}
@@ -122,7 +121,6 @@ const styles = StyleSheet.create({
         alignItems: 'stretch',
     },
     nameBlock: {
-        // flex: 1,
         marginTop: 10,
         flexDirection: 'row',
         justifyContent: 'space-around',

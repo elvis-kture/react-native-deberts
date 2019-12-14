@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList } from 'react-native';
-import { RadioButton } from 'react-native-material-ui';
 import { connect } from "react-redux";
 
 import RadioForm from 'react-native-simple-radio-button';
@@ -10,6 +8,7 @@ import * as actions from "../../store/actions/index";
 const GAME_LIST = [
     {label:162, value:162},
     {label:182, value:182},
+    {label:202, value:202},
     {label:212, value:212},
     {label:222, value:222},
     {label:232, value:232},

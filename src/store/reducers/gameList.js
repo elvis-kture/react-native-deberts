@@ -7,8 +7,6 @@ const initialState = {
 
 const gameChange = (state, action) => {
 
-    console.log('reducer:gameChange')
-
     return updateObject( state, {
         game: action.cur_game
     } );

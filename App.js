@@ -5,6 +5,7 @@ import * as Font from 'expo-font';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { activateKeepAwake } from 'expo-keep-awake';
 
 import {
     AdMobBanner,
@@ -71,12 +72,25 @@ export default class App extends React.Component {
         this.state = { loading: true };
     }
 
+    _activate = () => {
+        activateKeepAwake();
+    };
+
     async componentDidMount() {
         await Font.loadAsync({
             'Roboto': require('./assets/fonts/Roboto-Black.ttf'),
             'roboto-black': require('./assets/fonts/Roboto-Black.ttf'),
         });
         this.setState({ loading: false });
+        this._activate()
+    }
+
+    bannerAdReceived = () => {
+        console.log('banner ad received')
+    }
+
+    bannerError = () => {
+        console.log('banner ad not loading')
     }
 
     render() {
@@ -91,16 +105,13 @@ export default class App extends React.Component {
             <Provider store={store}>
                 <Navigation />
                 <AdMobBanner
-                    style={{marginBottom: 20}}
-                    bannerSize="smartBannerPortrait"
-                    // adUnitID="ca-app-pub-4065129637072044/1716623731" // reward
-                    // adUnitID="ca-app-pub-4065129637072044/5865937523" // native enh
+                    style={{paddingBottom: 20, backgroundColor: '#313131'}}
+                    bannerSize="fullBanner"
                     adUnitID="ca-app-pub-4065129637072044/4809690931" // banner
-                    servePersonalizedAds={true} // true or false
-                    onDidFailToReceiveAdWithError={() => alert('Banner error')} />
+                    onDidFailToReceiveAdWithError={this.bannerError}
+                    onAdViewDidReceiveAd = {this.bannerAdReceived}
+                />
             </Provider>
         );
     }
 }
-
-// export default createAppContainer(navigator);

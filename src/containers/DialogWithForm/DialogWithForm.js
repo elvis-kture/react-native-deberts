@@ -5,7 +5,6 @@ import * as consts from '../../consts'
 
 export default function FormDialog(props) {
     const [newName, setNewName] = useState('')
-    console.log()
     return (
             <Dialog.Container visible={props.openChangePopup}>
                 <Dialog.Title>{consts.CHANGE_NAME_TEXT_TITLE}</Dialog.Title>

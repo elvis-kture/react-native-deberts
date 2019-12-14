@@ -3,13 +3,13 @@
     "name": "deberts",
     "slug": "deberts",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
+    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -27,10 +27,11 @@
       "supportsTablet": true,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-4065129637072044~3085545727"
-      }
+      },
+      "bundleIdentifier": "com.koshkinDD.deberts"
     },
     "android": {
-      "supportsTablet": true,
+      "package": "com.koshkinDD.deberts",
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-4065129637072044~3085545727"
       }
@@ -38,9 +39,6 @@
     "packagerOpts": {
       "config": "metro.config.js",
       "sourceExts": ["js", "jsx", "css"]
-    },
-    "iosStatusBar": {
-      "backgroundColor": "#C2185B"
     }
   }
 }

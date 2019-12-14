@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
@@ -10,7 +10,6 @@ import HistoryCell from '../containers/HistoryList/HistoryCell/HistoryCell'
 class HistoryList extends Component {
 
     componentDidMount(){
-        console.log('HistoryComponentDidMount')
         this.props.onInitHistoryRows();
     }
 
@@ -27,14 +26,17 @@ class HistoryList extends Component {
                     key={key}
                     index={key}
                     pair_obj={item.total}
-                    deleted={() => this.props.onDeleteHistoryRow(key)}
+                    deleted={this.props.onDeleteHistoryRow}
                 />
             })
 
         return (
-            <View style={{flex:1, backgroundColor: '#313131'}}>
+            <ScrollView
+                style={{flex:1, backgroundColor: '#313131'}}
+                showsVerticalScrollIndicator={false}
+            >
                 {history}
-            </View>
+            </ScrollView>
         )
     }
 

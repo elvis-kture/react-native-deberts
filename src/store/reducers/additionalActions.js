@@ -8,12 +8,12 @@ const initialState = {
 
 const onMinus = (state, action) => {
 
-    console.log('reducer:onMinus')
     let new_row = {
         [consts.LEFT]: 0,
         [consts.RIGHT]: 0
 
     }
+
     new_row[action.side] = action.minus
     let newPoints = [...action.points]
     newPoints.push(new_row)

@@ -10,14 +10,16 @@ const HistoryCell = (props) => {
 
     return <View style={{ ...background, paddingBottom: 20}}>
             <View style={styles.buttons}>
-                <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 20, color: textColor}}>
+                <Text style={{ flex: 4, textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 20, color: textColor}}>
                     {props.date}
                 </Text>
-                <View style={{top: 40}}>
+                <View
+                    style={{ padding: 5, top: 15, right: 20 }}>
                     <Icon
-                        onPress={props.deleted}
+                        onPress={() => setTimeout(() => {props.deleted(props.index)}, 100)}
                         name="remove-circle"
                         size={30}
+                        style={{padding: 5}}
                         color="red"
                     />
                 </View>
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'stretch',
-        fontSize: 40
+        fontSize: 40,
     },
     button: {
         fontSize: 40
