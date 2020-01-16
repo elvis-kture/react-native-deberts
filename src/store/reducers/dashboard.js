@@ -21,7 +21,7 @@ const initState = {
     sideNames: {
         [consts.LEFT]: consts.DEFAULT_LEFT_NAME,
         [consts.RIGHT]: consts.DEFAULT_RIGHT_NAME
-    }
+    },
 }
 
 let initialState = initState
@@ -158,7 +158,6 @@ const changeName = (state, action) => {
 };
 
 const clearRows = (state, action) => {
-
     const lastGame = updateObject( initState, {
         sideNames: {
             [consts.LEFT]: state.sideNames[consts.LEFT],

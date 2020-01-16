@@ -2,6 +2,7 @@ node_modules/**/*
 .expo/*
 .idea/*
 .idea
+.DS_Store
 npm-debug.*
 *.jks
 *.p12

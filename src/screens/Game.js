@@ -25,6 +25,7 @@ class Game extends Component {
 
         if (props.navigation.getParam('newGame', false)) {
             props.onNewGame()
+            props.onGameChange(162)
             props.onChangeName(consts.LEFT, consts.DEFAULT_LEFT_NAME)
             props.onChangeName(consts.RIGHT, consts.DEFAULT_RIGHT_NAME)
         }
@@ -177,6 +178,7 @@ const mapDispatchToProps = (dispatch, props) => {
         onChangeSide: (side) => dispatch(actions.changeSide(side)),
         onChangeName: (side, name) => dispatch(actions.changeName(side, name)),
         onNewGame: () => dispatch(actions.clearRows()),
+        onGameChange: (game) => dispatch(actions.gameChange(game)),
     }
 }
 

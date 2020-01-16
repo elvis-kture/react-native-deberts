@@ -19,6 +19,7 @@ const Home = ({navigation}) => {
 
 const styles = StyleSheet.create({
     canvas: {
+        marginTop: 15,
         flex:1,
         width: '100%',
     },

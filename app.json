@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "deberts",
+    "name": "Деберц",
     "slug": "deberts",
     "privacy": "public",
     "sdkVersion": "35.0.0",
@@ -9,13 +9,13 @@
       "android",
       "web"
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#313131"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
